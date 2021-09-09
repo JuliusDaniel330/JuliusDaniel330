@@ -16,6 +16,7 @@ def case_count(string: str) -> dict:
 
 print(case_count("The University of Lagos"))
 
+
 # NO 1 WITH NO DEFINED FUNCTION.
 school = "University Of Lagos"
 lowers, uppers = 0, 0

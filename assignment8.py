@@ -11,7 +11,7 @@ print(square_dict(8))
 
 # With an input function for the user to input an integer value.
 number = int(input("Input a number: "))
-direct = dict()
+direct = {}
 
 for x in range(1, number + 1):
     direct[x] = x*x
