@@ -183,7 +183,8 @@ class Player:
 nam = input("Enter the name: ")
 lev = int(input("Enter the level: "))
 
-P1 = Player("Daniel")
+P1 = Player(name, level)
+P1.intro()
 
 print(type(3))
 
@@ -204,3 +205,204 @@ samsung = Phone("samsung s20", 1400)
 print(iphone.brand)
 print(iphone.price)
 iphone.call("08138174405")
+
+
+
+
+class Car:
+    def __init__(self, color, mileage):
+        self.color = color
+        self.mileage = mileage
+
+    def the_cars(self):
+        print("The", self.color, 'car has', str(self.mileage), 'miles.')
+
+
+brand1 = Car("blue", '20,000')
+brand1.the_cars()
+
+brand2 = Car("red", '30,000')
+brand2.the_cars()
+
+
+class BankAccount:
+    def __init__(self, name, account_number, balance):
+        self.name = name
+        self.account_number = account_number
+        self.balance = balance
+
+    def deposit(self):
+        amount = int(input("Enter amount to be Deposited: "))
+        self.balance += amount
+        print("\n Amount Deposited:", amount)
+
+    def withdraw(self):
+        amount = int(input("Enter amount to be Withdrawn: "))
+        if self.balance >= amount:
+            self.balance -= amount
+            print("\n You Withdrew:", amount)
+        else:
+            print("\n Insufficient balance  ")
+
+    def bank_fees(self):
+        self.balance = 95 / 100 * self.balance
+
+    def display(self):
+        print("\nAccount Name: ", self.name)
+        print("\naccount number: ", self.account_number)
+        print("\nAvailable Balance=", self.balance)
+
+
+Account1 = BankAccount('Julius Daniel', '19371554951', 20000)
+Account2 = BankAccount('Daniel Julius',  '19371564761', 40000)
+
+Account1.deposit()
+Account1.withdraw()
+Account1.bank_fees()
+Account1.display()
+
+
+Account2.deposit()
+Account2.withdraw()
+Account2.bank_fees()
+Account2.display()
+
+
+class Student:
+    def __init__(self, name, marks):
+        self.marks = marks
+        self.name = name
+
+    def check_pass_fail(self):
+        print(f"this is mr {self.name}.")
+        if self.marks >= 40:
+            return True
+        else:
+            return False
+
+
+student1 = Student("Daniel", 35)
+student1.name = "Daniel"
+student1.marks = 35
+
+did_pass = student1.check_pass_fail()
+print(did_pass)
+
+class Car:
+    def __init__(self, color, mileage):
+        self.color = color
+        self.mileage = mileage
+
+    def the_cars(self):
+        print("The", self.color, 'car has', str(self.mileage), 'miles.')
+
+
+brand1 = Car("blue", '20,000')
+brand1.the_cars()
+
+brand2 = Car("red", '30,000')
+brand2.the_cars()
+
+
+class BankAccount:
+    def __init__(self, name, account_number, balance):
+        self.name = name
+        self.account_number = account_number
+        self.balance = balance
+
+    def deposit(self):
+        amount = int(input("Enter amount to be Deposited: "))
+        self.balance += amount
+        print("\n Amount Deposited:", amount)
+
+    def withdraw(self):
+        amount = int(input("Enter amount to be Withdrawn: "))
+        if self.balance >= amount:
+            self.balance -= amount
+            print("\n You Withdrew:", amount)
+        else:
+            print("\n Insufficient balance  ")
+
+    def bank_fees(self):
+        self.balance = 95 / 100 * self.balance
+
+    def display(self):
+        print("\nAccount Name: ", self.name)
+        print("\naccount number: ", self.account_number)
+        print("\nAvailable Balance=", self.balance)
+
+
+Account1 = BankAccount('Julius Daniel', '19371554951', 20000)
+Account2 = BankAccount('Daniel Julius',  '19371564761', 40000)
+
+Account1.deposit()
+Account1.withdraw()
+Account1.bank_fees()
+Account1.display()
+
+
+Account2.deposit()
+Account2.withdraw()
+Account2.bank_fees()
+Account2.display()
+
+
+class Student:
+    def __init__(self, name, marks):
+        self.marks = marks
+        self.name = name
+
+    def check_pass_fail(self):
+        print(f"this is mr {self.name}.")
+        if self.marks >= 40:
+            return True
+        else:
+            return False
+
+
+student1 = Student("Daniel", 35)
+student1.name = "Daniel"
+student1.marks = 35
+
+did_pass = student1.check_pass_fail()
+print(did_pass)
+
+
+class Juice:
+    def __init__(self, name, capacity):
+        self.name = name
+        self.capacity = capacity
+
+    def __str__(self):
+        return self.name + ' (' + str(self.capacity) + 'L)'
+
+    def __add__(self, new_juice):
+        return Juice(self.name + '&' + new_juice.name, self.capacity + new_juice.capacity)
+
+
+a = Juice('Orange', 1.5)
+b = Juice('Apple', 2.0)
+
+result = a + b
+print(result)
+
+
+class Juice:
+    def __init__(self, name, capacity):
+        self.name = name
+        self.capacity = capacity
+
+    def __add__(self, other):
+        new_name = self.name+"&"+other.name
+        new_capacity = self.capacity + other.capacity
+        return new_name + (str(" ")) + str("(") + (str(new_capacity)+"L)")
+
+    def __str__(self):
+        return self.name + ' ('+str(self.capacity)+'L)'
+
+
+a = Juice('Orange', 1.5)
+b = Juice('Apple', 2.0)
+
+result = a + b
+print(result)
